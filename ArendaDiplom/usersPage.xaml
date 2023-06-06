@@ -1,0 +1,41 @@
+﻿<Page x:Class="ArendaDiplom.usersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ArendaDiplom"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="usersPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition />
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Text="пользователи" FontWeight="Bold" FontSize="16"/>
+
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" x:Name="usersList">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="логин" Binding="{Binding login}"/>
+                <DataGridTextColumn Header="пароль" Binding="{Binding password}"/>
+                <DataGridTextColumn Header="права администратора" Binding="{Binding isAdmin}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="редактировать" x:Name="editUsers" Click="editUsers_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Button Margin="10,0,10,0" Content="Удалить" Background="Red" Width="120" x:Name="dellete" Click="dellete_Click"/>
+            <Button Margin="10,0,10,0" Content="Добавить" Width="120" x:Name="addNew" Click="addNew_Click"/>
+        </StackPanel>        
+
+    </Grid>
+</Page>

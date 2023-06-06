@@ -1,0 +1,44 @@
+﻿<Page x:Class="ArendaDiplom.addNewVideoDevice"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ArendaDiplom"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="addNewVideoDevice" MaxWidth="850" MaxHeight="500">
+
+    <Grid Background="white">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="20" TextAlignment="Left" Text="Статус" Visibility="Hidden"/>
+        <ComboBox Grid.Row="0" Grid.Column="1" Width="150" Height="25" DisplayMemberPath="nameStatus" SelectedItem="{Binding typeStatus}" x:Name="comboList" Visibility="Hidden"/>
+
+        <TextBlock Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="20" TextAlignment="Left" Text="Название устройства"/>
+        <TextBlock Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="20" TextAlignment="Left" Text="Модель"/>
+        <TextBlock Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="20" TextAlignment="Left" Text="Стоимость за сутки"/>
+        <TextBlock Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="20" TextAlignment="Left" Text="Количество"/>
+
+        <Button Grid.Column="0" Grid.Row="5" Width="120" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Отмена" x:Name="cancel" Background="red" Click="cancel_Click"/>
+        <Button Grid.Column="1" Grid.Row="5" Width="120" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Добавить" x:Name="save" Background="Green" IsDefault="True" Click="save_Click"/>
+
+        <TextBox Grid.Row="1" Grid.Column="1" Width="150" Height="25" Text="{Binding name}" Name="inputName" MaxLength="20"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Width="150" Height="25" Text="{Binding model}" x:Name="inputModel" MaxLength="20"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Width="150" Height="25" Text="{Binding price}" x:Name="inputPrice"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Width="150" Height="25" Text="{Binding count}" x:Name="inputCount"/>
+
+    </Grid>
+</Page>

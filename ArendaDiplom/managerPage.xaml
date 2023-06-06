@@ -1,0 +1,39 @@
+﻿<Window x:Class="ArendaDiplom.managerPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArendaDiplom"
+        mc:Ignorable="d"
+        Title="Менеджер" Height="550" Width="1220" WindowStartupLocation="CenterScreen" Icon="images/logotip.jpg">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Content="Выход" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Height="40" x:Name="exit" Click="exit_Click" Background="Red" FontSize="14"/>
+            <Button Grid.Row="1" Content="Аудио" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Height="40" x:Name="audio" Click="audio_Click" FontSize="14"/>
+            <Button Grid.Row="2" Content="Видео" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Height="40" x:Name="video" Click="video_Click" FontSize="14"/>
+            <Button Grid.Row="3" Content="Световые" VerticalAlignment="Center" HorizontalAlignment="Center" Width="120" Height="40" x:Name="light" Click="light_Click" FontSize="14"/>
+
+        </Grid>
+
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="1"/>
+
+
+    </Grid>
+</Window>

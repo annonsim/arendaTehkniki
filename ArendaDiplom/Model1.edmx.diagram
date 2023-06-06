@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="956cd3db846b4477be3e603d15946f6a" Name="Diagram1">
+        <EntityTypeShape EntityType="arendaDipModel.audioDevice" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="arendaDipModel.lightDevice" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="arendaDipModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="arendaDipModel.typeStatus" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="arendaDipModel.users" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="arendaDipModel.videosDevice" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <AssociationConnector Association="arendaDipModel.FK_audioDevice_typeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="arendaDipModel.FK_lightDevice_typeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="arendaDipModel.FK_videosDevice_typeStatus" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
